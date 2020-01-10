@@ -54,16 +54,20 @@
   <ItemGroup>
     <Compile Include="Configuration\Configure.cs" />
     <Compile Include="Configuration\IConfigure.cs" />
+    <Compile Include="Logger\ILogMaker.cs" />
+    <Compile Include="Logger\LogMaker.cs" />
+    <Compile Include="Pages\IMainPage.cs" />
+    <Compile Include="Pages\MainPage.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Tests\ILogInOut.cs" />
+    <Compile Include="Tests\LogInOut.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Pages\" />
-    <Folder Include="Tests\" />
     <Folder Include="Values\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

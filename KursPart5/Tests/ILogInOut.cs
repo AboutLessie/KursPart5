@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace KursPart5.Configuration
+namespace KursPart5.Tests
 {
-    public interface IConfigure
+    public interface ILogInOut
     {
     }
 }

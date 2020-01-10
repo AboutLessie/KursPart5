@@ -4,9 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace KursPart5.Configuration
+namespace KursPart5.Logger
 {
-    public interface IConfigure
+    public interface ILogMaker
     {
+        void AddToLog(string text);
     }
 }

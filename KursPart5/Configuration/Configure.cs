@@ -11,7 +11,9 @@ namespace KursPart5.Configuration
 {
      public class Configure : IConfigure
      {
-        public void BrowserChoose()
+        private static IWebDriver driver;
+
+        public static IWebDriver BrowserChoose()
         {
             Console.WriteLine("Select browser:\n");
             Console.WriteLine("IE = 1 | Chrome = 2");
@@ -20,19 +22,24 @@ namespace KursPart5.Configuration
             {
                 if (option == 1)
                 {
-                    IWebDriver driver = new InternetExplorerDriver();
+                    driver = new InternetExplorerDriver();
                     driver.Manage().Window.Maximize();
+                    driver.Close();
                 }
                 if (option == 2)
                 {
-                    IWebDriver driver = new ChromeDriver();
+                    driver = new ChromeDriver();
                     driver.Manage().Window.Maximize();
+                    driver.Close();
                 }
             }
             else
             {
                 Console.WriteLine("Error! We will use Chrome!");
             }
+            return driver;
         }
+
+
     }
 }
